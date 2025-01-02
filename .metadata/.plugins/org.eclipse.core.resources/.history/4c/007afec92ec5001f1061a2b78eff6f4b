@@ -1,0 +1,5 @@
+package com.example.CRUDApp.entity;
+
+public class Employee {
+
+}

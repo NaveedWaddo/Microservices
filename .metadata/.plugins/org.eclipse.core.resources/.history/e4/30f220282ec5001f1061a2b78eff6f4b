@@ -1,0 +1,5 @@
+package com.example.CRUDApp.repository;
+
+public interface EmployeeRepository {
+
+}

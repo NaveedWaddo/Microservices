@@ -1,0 +1,5 @@
+package com.ecommerce.cart.entity;
+
+public class CartItem {
+
+}

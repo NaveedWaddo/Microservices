@@ -1,0 +1,26 @@
+package com.ecommerce.order.service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ecommerce.order.entity.Order;
+import com.ecommerce.order.repository.OrderRepository;
+
+@Service
+public class OrderService {
+    @Autowired
+    private OrderRepository orderRepository;
+    
+    public Order createOrder(Order order) {
+        order.setOrderDate(LocalDateTime.now());
+        order.setStatus("PENDING");
+        return orderRepository.save(order);
+    }
+    
+    public List<Order> getOrdersByUserId(Long userId) {
+        return orderRepository.findByUserId(userId);
+    }
+}

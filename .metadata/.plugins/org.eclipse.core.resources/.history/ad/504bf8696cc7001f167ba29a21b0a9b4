@@ -1,0 +1,5 @@
+package com.example.CRUDApp.exception;
+
+public class InvalidDataException {
+
+}
